@@ -19,6 +19,11 @@ namespace DataModel
            return _BrandManager.AddBrand(brand);
         }
 
+        public bool DeleteBrand(int id)
+        {
+            return _BrandManager.DeleteBrand(id);
+        }
+
         public IEnumerable<Brands> GetAllBrands()
         {
             return _BrandManager.GetAllBrands();

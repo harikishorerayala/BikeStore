@@ -9,5 +9,6 @@ namespace DataModel.Interfaces
         Brands GetBrandInfo(int id);
         bool AddBrand(Brands brand);
         bool UpdateBrand(Brands brand);
+        bool DeleteBrand(int id);
     }
 }

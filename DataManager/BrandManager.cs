@@ -30,6 +30,24 @@ namespace DataManager
             }
         }
 
+        public bool DeleteBrand(int id)
+        {
+            using (BikeStoreEntities entities = new BikeStoreEntities())
+            {
+                var result = entities.brands.FirstOrDefault(a => a.brand_id == id);
+                entities.brands.Remove(result);
+                var affected = entities.SaveChanges();
+                if (affected > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public IEnumerable<Brands> GetAllBrands()
         {
             using (BikeStoreEntities entities = new BikeStoreEntities())
