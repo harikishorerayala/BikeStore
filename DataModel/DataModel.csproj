@@ -49,7 +49,6 @@
   <ItemGroup>
     <Compile Include="BrandModel.cs" />
     <Compile Include="DependencyInjectionExtension.cs" />
-    <Compile Include="DependencyOfDependencyExtension.cs" />
     <Compile Include="Interfaces\IBrandModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
