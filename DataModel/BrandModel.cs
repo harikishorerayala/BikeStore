@@ -1,21 +1,22 @@
-﻿using DataManager;
+﻿using DataManager.Interfaces;
 using DataModel.Interfaces;
 using DataTransfers;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataModel
 {
     public class BrandModel : IBrandModel
     {
+        private IBrandManager _BrandManager;
+
+        public BrandModel(IBrandManager mgr)
+        {
+            this._BrandManager = mgr;
+        }
+
         public IEnumerable<Brands> GetAllBrands()
         {
-
-            BrandManager obj = new BrandManager();
-            return obj.GetAllBrands();
+            return _BrandManager.GetAllBrands();
         }
     }
 }
