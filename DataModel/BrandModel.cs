@@ -16,7 +16,7 @@ namespace DataModel
 
         public bool AddBrand(Brands brand)
         {
-           return _BrandManager.AddBrand(brand);
+            return _BrandManager.AddBrand(brand);
         }
 
         public bool DeleteBrand(int id)

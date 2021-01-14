@@ -1,10 +1,5 @@
 ﻿using DataModel.Interfaces;
 using DataTransfers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace BikeStore.Controllers
@@ -19,7 +14,6 @@ namespace BikeStore.Controllers
             this._model = model;
         }
 
-        
         [HttpGet]
         [Route("api/brands/getallbrands")]
         public IHttpActionResult GetAllBrands()
@@ -29,7 +23,8 @@ namespace BikeStore.Controllers
 
         [HttpGet]
         [Route("api/brands/getbrand/{id}")]
-        public IHttpActionResult GetBrandInfo(int id) {
+        public IHttpActionResult GetBrandInfo(int id)
+        {
             return Ok(_model.GetBrandInfo(id));
         }
 
@@ -53,7 +48,5 @@ namespace BikeStore.Controllers
         {
             return Ok(_model.DeleteBrand(id));
         }
-
-
     }
 }

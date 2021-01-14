@@ -1,7 +1,7 @@
 ﻿using DataManager;
 using DataManager.Interfaces;
-using Unity.Extension;
 using Unity;
+using Unity.Extension;
 
 namespace DataModel
 {

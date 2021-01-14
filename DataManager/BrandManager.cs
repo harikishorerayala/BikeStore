@@ -52,7 +52,6 @@ namespace DataManager
         {
             using (BikeStoreEntities entities = new BikeStoreEntities())
             {
-
                 return entities.brands.ToList().Select(a => new Brands() { Brand_Id = a.brand_id, Brand_Name = a.brand_name }).ToList();
             }
         }
@@ -61,7 +60,6 @@ namespace DataManager
         {
             using (BikeStoreEntities entities = new BikeStoreEntities())
             {
-
                 var result = entities.brands.FirstOrDefault(a => a.brand_id == id);
                 Brands obj = new Brands
                 {
@@ -76,7 +74,6 @@ namespace DataManager
         {
             using (BikeStoreEntities entities = new BikeStoreEntities())
             {
-
                 var result = entities.brands.FirstOrDefault(a => a.brand_id == brand.Brand_Id);
 
                 result.brand_name = brand.Brand_Name;
@@ -91,8 +88,6 @@ namespace DataManager
                 {
                     return false;
                 }
-
-
             }
         }
     }

@@ -6,9 +6,13 @@ namespace DataManager.Interfaces
     public interface IBrandManager
     {
         IEnumerable<Brands> GetAllBrands();
+
         Brands GetBrandInfo(int id);
+
         bool AddBrand(Brands brand);
+
         bool UpdateBrand(Brands brand);
+
         bool DeleteBrand(int id);
     }
 }
