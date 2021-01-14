@@ -14,9 +14,24 @@ namespace DataModel
             this._BrandManager = mgr;
         }
 
+        public bool AddBrand(Brands brand)
+        {
+           return _BrandManager.AddBrand(brand);
+        }
+
         public IEnumerable<Brands> GetAllBrands()
         {
             return _BrandManager.GetAllBrands();
+        }
+
+        public Brands GetBrandInfo(int id)
+        {
+            return _BrandManager.GetBrandInfo(id);
+        }
+
+        public bool UpdateBrand(Brands brand)
+        {
+            return _BrandManager.UpdateBrand(brand);
         }
     }
 }
