@@ -43,8 +43,8 @@ namespace BikeStore.Controllers
         }
 
         [HttpDelete]
-        [Route("api/brands/deletebrand/{id}")]
-        public IHttpActionResult DeleteBrand(int id)
+        [Route("api/brands/deletebrand")]
+        public IHttpActionResult DeleteBrand([FromBody]int id)
         {
             return Ok(_model.DeleteBrand(id));
         }

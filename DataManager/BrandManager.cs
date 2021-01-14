@@ -35,6 +35,7 @@ namespace DataManager
             using (BikeStoreEntities entities = new BikeStoreEntities())
             {
                 var result = entities.brands.FirstOrDefault(a => a.brand_id == id);
+                if (result == null) return false;
                 entities.brands.Remove(result);
                 var affected = entities.SaveChanges();
                 if (affected > 0)
