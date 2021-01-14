@@ -34,5 +34,6 @@ namespace DataManager
         public virtual DbSet<order> orders { get; set; }
         public virtual DbSet<staff> staffs { get; set; }
         public virtual DbSet<store> stores { get; set; }
+        public virtual DbSet<UserMaster> UserMasters { get; set; }
     }
 }

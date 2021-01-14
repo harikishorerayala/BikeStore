@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationManager.cs" />
     <Compile Include="BikeStoreModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +76,7 @@
     <Compile Include="customer.cs">
       <DependentUpon>BikeStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAuthenticationManager.cs" />
     <Compile Include="Interfaces\IBrandManager.cs" />
     <Compile Include="order.cs">
       <DependentUpon>BikeStoreModel.tt</DependentUpon>
@@ -93,6 +95,9 @@
       <DependentUpon>BikeStoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="store.cs">
+      <DependentUpon>BikeStoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.cs">
       <DependentUpon>BikeStoreModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

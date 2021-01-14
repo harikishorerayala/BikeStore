@@ -18,10 +18,12 @@ namespace BikeStore
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-
+            //register all your DataModel objects
             container.RegisterType<IBrandModel, BrandModel>();
-            container.AddNewExtension<DependencyInjectionExtension>();
+            container.RegisterType<IAuthenticationModel, AuthenticationModel>();
 
+            //this will register the DataManager Layer using extension class in DataModel layer.
+            container.AddNewExtension<DependencyInjectionExtension>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
            
 

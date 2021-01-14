@@ -47,8 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationModel.cs" />
     <Compile Include="BrandModel.cs" />
     <Compile Include="DependencyInjectionExtension.cs" />
+    <Compile Include="Interfaces\IAuthenticationModel.cs" />
     <Compile Include="Interfaces\IBrandModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -25,6 +25,7 @@
         <AssociationConnector Association="BikeStoreModel.FK__orders__store_id__35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="BikeStoreModel.FK__staffs__manager___31EC6D26" ManuallyRouted="false" />
         <AssociationConnector Association="BikeStoreModel.FK__staffs__store_id__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BikeStoreModel.UserMaster" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

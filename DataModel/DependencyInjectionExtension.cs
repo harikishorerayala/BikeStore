@@ -9,7 +9,9 @@ namespace DataModel
     {
         protected override void Initialize()
         {
+            //Register all your Manager  Interfaces with its concrete types here
             Container.RegisterType<IBrandManager, BrandManager>();
+            Container.RegisterType<IAuthenticationManager, AuthenticationManager>();
         }
     }
 }
