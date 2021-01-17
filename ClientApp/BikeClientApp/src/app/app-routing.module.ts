@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminguradGuard } from './admingurad.guard';
+import { GeneraluserGuardGuard } from './generaluser-guard.guard';
 
 const routes: Routes = [
   {
@@ -11,6 +13,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
+    canActivate:[AdminguradGuard]
   },
   {
     path: 'generaluser',
@@ -18,11 +21,11 @@ const routes: Routes = [
       import('./generaluser/generaluser.module').then(
         (m) => m.GeneraluserModule
       ),
+      canActivate:[GeneraluserGuardGuard]
   },
   {
     path: '',
-    loadChildren: () =>
-      import('./login/login.module').then((m) => m.LoginModule),
+    redirectTo:'login',
     pathMatch:'full'
   },
 ];

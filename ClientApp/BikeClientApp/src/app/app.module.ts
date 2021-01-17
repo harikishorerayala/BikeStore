@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
 import { AdminModule } from './admin/admin.module';
 import { GeneraluserModule } from './generaluser/generaluser.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,9 +21,11 @@ import { GeneraluserModule } from './generaluser/generaluser.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     LoginModule,
     AdminModule,
-    GeneraluserModule
+    GeneraluserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

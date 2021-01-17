@@ -6,6 +6,8 @@ export const environment = {
   production: false
 };
 
+const baseUrl="http://localhost:51054";
+const tokenurl= baseUrl+"/token";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

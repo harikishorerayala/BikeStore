@@ -1,1 +1,6 @@
-<p>login works!</p>
+<form [formGroup]="loginform" (ngSubmit)="doLogin()">
+  <input type="text" id="login" class="fadeIn second" placeholder="username" formControlName="txtUserName">
+  <input type="text" id="password" class="fadeIn third" placeholder="password" formControlName="txtPassword">
+  <input type="submit" class="fadeIn fourth" value="Log In">
+</form>
+<!-- token: {{token.access_token}} -->
